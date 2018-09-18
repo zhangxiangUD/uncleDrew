@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dakun.jianzhong.mapper.AccountCityMapper">
+  <resultMap id="BaseResultMap" type="com.dakun.jianzhong.model.AccountCity">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="parent_id" jdbcType="INTEGER" property="parentId" />
+    <result column="first_letter" jdbcType="VARCHAR" property="firstLetter" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+  </resultMap>
+
+  <select id="getCityAndChilren" parameterType="java.util.HashMap" resultMap="BaseResultMap">
+  select c.* from account_city c,
+    (
+      select id from account_city where level=#{level}
+      <if test="likeName != null">and name like '%${likeName}%'
+      </if>
+    ) p
+   where c.id = p.id or c.parent_id = p.id
+    order by c.level,c.id,c.parent_id
+  </select>
+</mapper>

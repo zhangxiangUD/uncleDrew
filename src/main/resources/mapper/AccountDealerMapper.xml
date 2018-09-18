@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dakun.jianzhong.mapper.AccountDealerMapper">
+  <resultMap id="BaseResultMap" type="com.dakun.jianzhong.model.AccountDealer">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="id_number" jdbcType="VARCHAR" property="idNumber" />
+    <result column="dealer_name" jdbcType="VARCHAR" property="dealerName" />
+    <result column="ic_front" jdbcType="VARCHAR" property="icFront" />
+    <result column="ic_back" jdbcType="VARCHAR" property="icBack" />
+    <result column="business_lisence" jdbcType="VARCHAR" property="businessLisence" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="shop_front" jdbcType="VARCHAR" property="shopFront" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+  </resultMap>
+</mapper>

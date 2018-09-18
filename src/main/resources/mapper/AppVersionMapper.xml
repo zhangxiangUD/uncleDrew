@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dakun.jianzhong.mapper.AppVersionMapper">
+  <resultMap id="BaseResultMap" type="com.dakun.jianzhong.model.AppVersion">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="version_code" jdbcType="INTEGER" property="versionCode" />
+    <result column="version_name" jdbcType="VARCHAR" property="versionName" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="os_type" jdbcType="INTEGER" property="osType" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="uptime" jdbcType="TIMESTAMP" property="uptime" />
+    <result column="version_note" jdbcType="VARCHAR" property="versionNote" />
+    <result column="channel" jdbcType="INTEGER" property="channel" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="last_modify_time" jdbcType="TIMESTAMP" property="lastModifyTime" />
+  </resultMap>
+</mapper>
